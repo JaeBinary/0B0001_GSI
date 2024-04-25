@@ -24,7 +24,7 @@ numList.insert(2, 25)       #insert() : 리스트 원하는 번째의 요소에 
 ### del() 함수
 ```python
 numList = [10, 20, 30]
-del(numList[2])             #del()  : 리스트 및 리스트 요소 삭제
+del(numList[2])             #del() : 리스트 및 리스트 요소 삭제
 ```
 #### 결과
     [10, 20]
@@ -43,7 +43,7 @@ numList.remove(10)           #remove() : 리스트 요소의 특정 값 삭제! 
 ### pop() 메서드
 ```python
 numList = [10, 20, 30]
-numList.pop()                 #pop()   : 맨 뒤의 값을 추출! (반환을 해준다.)
+numList.pop()                 #pop() : 맨 뒤의 값을 추출! (반환을 해준다.)
 ```
 #### 결과
     [30]
@@ -89,7 +89,7 @@ numList.sort(reverse = True)    #내림차순 정렬!
 ### reverse() 메서드
 ```python
 numList = [10, 20, 30]
-numList.reverse()                 #reverse()   : 리스트의 마지막 인덱스부터 위치가 반전!
+numList.reverse()                 #reverse() : 리스트의 마지막 인덱스부터 위치가 반전!
 ```
 ### 결과
     [30, 20, 10]
