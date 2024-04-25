@@ -1,21 +1,24 @@
 '''
 프로그램 이름 : 컴퓨터와 인간의 숫자 맞히기 대결
-프로그램 설명 : 
+프로그램 설명 : 컴퓨터가 생각한 숫자를 맞히는 게임을 진행합니다.
 '''
 
-import random
+import random   #랜덤 모듈을 가져온다.
 
-computer, user = 0, 0
+computer, user = 0, 0   #컴퓨터와 사용자가 선택한 숫자를 저장할 변수를 초기화합니다.
 
-for i in range(1 , 11, 1) :
-    computer = random.randint(1, 5)
-    print("[%d회차 게임]" %(i))
-    user = int(input("컴퓨터가 생각한 숫자 : "))
+#총 10번의 게임을 진행합니다.
+for i in range(1, 11):
+    computer = random.randint(1, 5)     #컴퓨터가 숫자를 생각한다.
+    print("[%d회차 게임]" % i)           #현재 게임 회차를 출력한다.
+    user = int(input("컴퓨터가 생각한 숫자 : "))   # 사용자로부터 숫자를 입력받는다.
     
-    if computer == user :
-        print("맞혔습니다!\n")
-        break
-    else :
-        print("틀렸습니다.", computer, "였습니다.\n")
+    #일치하는 경우
+    if computer == user:
+        print("맞혔습니다!\n")      #성공 메시지를 출력한다.
+        break                     #게임을 종료한다.
+    #일치하지 않는 경우
+    else:
+        print("틀렸습니다.", computer, "였습니다.\n")  #실패 메시지와 정답을 출력한다.
 
-print("게임을 마칩니다.")
+print("게임을 마칩니다.")   # 게임이 종료되면 마침 메시지를 출력합니다.

@@ -11,39 +11,63 @@ scoreList = []  #평점계를 저장할 리스트
 
 for i in range(len(subjectList)) :
     
-    #이수학점과 성적을 append()를 통해 각 리스트 요소로 추가한다.
-    creditList.append(int(input(subjectList[i] + "의 이수학점 : ")))
-    markList.append(input(subjectList[i] + "의 성적 : "))
+    #이수학점 입력 부분
+    while True :
+        credit = input(subjectList[i] + "의 이수학점 : ")
+        
+        #이수학점이 숫자가 아닌 경우, 다시 입력 요청
+        #<추가개념>isdigit()를 사용하여 0을 포함한 양수로 이루어진 문자나 문자열만 입력받는다.
+        if not credit.isdigit() :
+            print("[경고] 이수학점을 숫자로 입력하세요.")
+            continue
+        
+        #올바른 입력인 경우 리스트에 추가하고 무한루프 탈출
+        creditList.append(int(credit))
+        break
     
-    #성적을 upper()를 통해 대소문자를 구분하지 않고 평점으로 변환한다.
-    if markList[i].upper() == 'A+' :
+    #성적 입력 부분
+    while True :
+        mark = input(subjectList[i] + "의 성적 : ")
+        
+        #성적이 유효하지 않은 경우, 다시 입력 요청
+        #upper()를 사용하여 소문자로 입력 시에도 정상 동작되며, 최종적으로 대문자로 저장한다.
+        if mark.upper() not in ['A+', 'A', 'B+', 'B', 'C+', 'C', 'D+', 'D', 'F'] :
+            print("[경고] 올바른 성적을 입력하세요.")
+            continue
+        
+        #올바른 입력인 경우 리스트에 추가하고 무한루프 탈출
+        markList.append(mark)
+        break
+    
+    #성적을 평점으로 변환하여 평점 리스트에 추가
+    if mark.upper() == 'A+' :
         gradeList.append(4.5)
-    elif markList[i].upper() == 'A' :
+    elif mark.upper() == 'A' :
         gradeList.append(4)
-    elif markList[i].upper() == 'B+' :
+    elif mark.upper() == 'B+' :
         gradeList.append(3.5)
-    elif markList[i].upper() == 'B' :
+    elif mark.upper() == 'B' :
         gradeList.append(3)
-    elif markList[i].upper() == 'C+' :
+    elif mark.upper() == 'C+' :
         gradeList.append(2.5)
-    elif markList[i].upper() == 'C' :
+    elif mark.upper() == 'C' :
         gradeList.append(2)
-    elif markList[i].upper() == 'D+' :
+    elif mark.upper() == 'D+' :
         gradeList.append(1.5)
-    elif markList[i].upper() == 'D' :
+    elif mark.upper() == 'D' :
         gradeList.append(1)
-    else :
+    elif mark.upper() == 'F' :
         gradeList.append(0)
     
     #평점계 : 이수학점 * 평점
     scoreList.append(creditList[i] * gradeList[i])
 
 #취득학점
-credit = sum(creditList)    #sum(리스트명) : 리스트의 요소의 핪을 구한다.
+credit = sum(creditList)                   #sum(리스트명) : 리스트의 요소의 핪을 구한다.
 print("\n취득학점 ===> ", credit)
 
 #총평점
-score = sum(scoreList)      #sum(리스트명) : 리스트의 요소의 핪을 구한다.
+score = sum(scoreList)                     #sum(리스트명) : 리스트의 요소의 핪을 구한다.
 print("총평점 ===> ", score)
 
 #평균평점 : 총평점 / 취득학점

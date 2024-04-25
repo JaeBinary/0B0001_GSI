@@ -15,6 +15,7 @@ while(operator != 'p') :
     
     #사용자로부터 python에서 가능한 연산기호를 입력받을 수 있도록 한다.
     if operator != '+' and operator != '-' and operator != '*' and operator != '/' and operator != '//' and operator != '%' and operator != '**' :
+        print("[경고] 올바른 연산기호를 입력하시오!")
         continue
     
     numList[1] = int(input("숫자를 입력하시오. : "))            #numList[1]에는 '연산될 값'을 저장한다.
@@ -26,11 +27,20 @@ while(operator != 'p') :
     elif operator == '*' :  #곱셈 연산을 실행한다.
         numList[0] *= numList[1]
     elif operator == '/' :  #나눗셈 연산을 실행한다.
-        numList[0] /= numList[1]
+        if numList[1] != 0 :
+            numList[0] /= numList[1]
+        else :
+            print("[경고] 0으로 나눌 수 없습니다.")
     elif operator == '//' : #몫 연산을 실행한다. : 나눗셈 연산 후 소수점을 버린다.
-        numList[0] //= numList[1]
+        if numList[1] != 0 :
+            numList[0] //= numList[1]
+        else :
+            print("[경고] 0으로 나눌 수 없습니다.")
     elif operator == '%' :  #나머지 연산을 실행한다.
-        numList[0] %= numList[1]
+        if numList[1] != 0 :
+            numList[0] %= numList[1]
+        else :
+            print("[경고] 0으로 나눌 수 없습니다.")
     elif operator == '**' : # 거듭제곱 연산을 실행한다.
         numList[0] **= numList[1]
 

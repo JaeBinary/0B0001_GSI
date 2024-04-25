@@ -3,20 +3,22 @@
 프로그램 설명 : 알파벳의 짝수번째 글자를 대문자를 변경하고 홀수번째는 소문자로 변경한다.
 '''
 
-charList =[]
-string = "ABcdEFGhijklNMOpqrstuvwxyz" #input("문자열을 입력하시오. : ")
-change = ''
+string = input("문자열을 입력하시오. : ")   #사용자로부터 문자열을 입력받는다.
+change = ''     #변환된 문자열을 저장할 변수를 초기화한다.
 
-for i in string :
-    charList.append(i)
+#문자열의 각 인덱스(i)와 문자(char)를 함께 가져와서 처리한다.
+#<추가개념>enumerate()를 사용하여 리스트의 각 요소와 인덱스에 접근할 수 있다.
+for i, ch in enumerate(string):
+    #짝수 번째 문자인 경우 대문자로 변환합니다.
+    if i % 2 == 1:
+        change += ch.upper()
+    #홀수 번째 문자인 경우 소문자로 변환합니다.
+    else:
+        change += ch.lower()
 
-for i in range(len(charList)) :
-    if((i + 1) % 2 == 0) : #짝수번째 글자 대문자로 변경
-        change += charList[i].upper()
-    else :
-        change += charList[i].lower()
-
-print(change)
+# 변환 전 문자열과 함께 변환된 문자열을 출력합니다.
+print("변환 전: ", string)
+print("변환 후: ", change)
 
 '''
 lower()는 문자열의 모든 문자를 소문자로 바꾼다.
