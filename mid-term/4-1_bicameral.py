@@ -17,8 +17,8 @@ for i, ch in enumerate(string):
         change += ch.lower()
 
 # 변환 전 문자열과 함께 변환된 문자열을 출력합니다.
-print("변환 전: ", string)
-print("변환 후: ", change)
+print("변환 전 :", string)
+print("변환 후 :", change)
 
 '''
 lower()는 문자열의 모든 문자를 소문자로 바꾼다.

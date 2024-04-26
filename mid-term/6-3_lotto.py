@@ -8,9 +8,9 @@ import random   #랜덤 모듈을 가져온다.
 computer, user = 0, 0   #컴퓨터와 사용자가 선택한 숫자를 저장할 변수를 초기화합니다.
 
 #총 10번의 게임을 진행합니다.
-for i in range(1, 11):
-    computer = random.randint(1, 5)     #컴퓨터가 숫자를 생각한다.
-    print("[%d회차 게임]" % i)           #현재 게임 회차를 출력한다.
+for i in range(10):
+    computer = random.randint(1, 5)              #컴퓨터가 숫자를 생각한다.
+    print("[%d회차 게임]" %(i + 1))               #현재 게임 회차를 출력한다.
     user = int(input("컴퓨터가 생각한 숫자 : "))   # 사용자로부터 숫자를 입력받는다.
     
     #일치하는 경우

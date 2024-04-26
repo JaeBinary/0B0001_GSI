@@ -10,4 +10,4 @@ for i in range(5):
     score.append(int(input("평가 점수 : ")))
 
 avg = sum(score) / 5                   #평균 점수를 계산한다.
-print("심사위원 평균 점수 ===> ", avg)   #평균 점수를 출력한다.
+print("심사위원 평균 점수 ===>", avg)   #평균 점수를 출력한다.
