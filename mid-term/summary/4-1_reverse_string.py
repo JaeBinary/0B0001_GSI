@@ -3,7 +3,7 @@
 범위 : Chapter 04. 데이터형과 문자열
 '''
 
-#시험 출제 가능성 (for문을 활용하여)
+
 
 ss = "트와이스"
 print("원본 문자열 : %s" %(ss))
@@ -13,4 +13,9 @@ print("반대 문자열 : ", end = '')
 print(ss[3], end = '')
 print(ss[2], end = '')
 print(ss[1], end = '')
-print(ss[0], end = '')
+print(ss[0])
+
+#시험 출제 가능성 (for문을 활용하여)
+#print("반대 문자열 : ", end = '')
+#for i in range(3, -1, -1) :
+#    print(ss[i], end = '')
