@@ -75,4 +75,3 @@ while True:
     else:
         # 잘못된 메뉴 선택 시 에러 메시지 출력하고 루프 계속
         print("잘못 선택하셨습니다.")
-        continue
