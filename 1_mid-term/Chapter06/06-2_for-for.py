@@ -1,3 +1,7 @@
+'''
+일자 : 5주차 (2024.04.05)
+범위 : Chapter 06. 반복문
+'''
 for i in range(3) : #range(0, 3, 1)
     for j in range(2) : #range(0, 2, 1)
         print("난생처음은 쉽습니다.^^ (i값 : %d, j값 : %d)" %(i, j))

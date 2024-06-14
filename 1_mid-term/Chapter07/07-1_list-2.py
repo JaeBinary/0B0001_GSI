@@ -1,5 +1,5 @@
 '''
-일자 : 7주차 (2024.04.19
+일자 : 7주차 (2024.04.19)
 범위 : Chapter 07. 리스트, 튜플, 딕셔너리
 참고 : https://docs.python.org/ko/3.12/tutorial/datastructures.html
 '''
