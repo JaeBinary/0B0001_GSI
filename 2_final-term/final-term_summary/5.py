@@ -4,7 +4,7 @@ def checkPassword(pwd):
     if len(pwd) < 8:
         return False
     
-    if ' ' in pwd:
+    if ' ' in pwd:      # 띄어씌기가 있을 때
         return False
     
     return True
@@ -22,6 +22,11 @@ while(True):
     else:
         print("오류! 비밀번호가 규칙에 맞지 않습니다")
 
+'''
+isalpha : 알파벳인지 확인
+isdigit : 숫자인지 확인
+isalnum : 알파벳 or 숫자인지 확인
+'''
 
 
 
@@ -32,9 +37,9 @@ def checkPassword(pwd) :
     if len(pwd) < 8 :
         return False
     
-    if pwd.isalnum() :
+    if pwd.isalnum() :  # 알파벳 or 숫자일 때
         return True
-    else :
+    else :              # 알파벳 or 숫자가 아닐 때
         return False
 
 ## 전역변수 선언 부분
